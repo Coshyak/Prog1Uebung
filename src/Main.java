@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Lästig");
-        blatt2Aufgabe1(true,false);
+        blatt3Aufgabe2();
     }
 
 
@@ -65,7 +65,7 @@ public class Main {
         int n;
         Scanner scan = new Scanner(System.in);
         n = scan.nextInt();
-        for(int i = 1; i <= n; i = i + 2){
+        for(int i = 1; i <= n*2; i = i + 2){
             System.out.println(i);
         }
         for(int i = 1; i <= n; i++) {
@@ -74,12 +74,45 @@ public class Main {
         for(int i = 1; i <= n; i++) {
             System.out.println(i * 13);
         }
-        for(int i = n; i >= 0; i--){
+        for(int i = n; i > 0; i--){
             System.out.println(i);
         }
     }
     public static void blatt2Aufgabe4(){
 
+    }
+    public static void blatt3Aufgabe1(){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        s = s.replace("a", "");
+        s = s.replace("e", "");
+        s = s.replace("i", "");
+        s = s.replace("o", "");
+        s = s.replace("u", "");
+        System.out.println(s);
+    }
+    public static void blatt3Aufgabe2(){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        s.toUpperCase();
+        boolean palindrom = false;
+        for(int i = 0; i < s.length(); i++){
+          if(s.charAt(i) == s.charAt(s.length() -(1 + i))){
+              palindrom = true;
+          } else{
+              palindrom = false;
+              break;
+          }
+        }
+        System.out.println(palindrom);
+    }
+    public static void  blatt3Aufgabe3(){
+        int a, b, c;
+        for(int i = 1; i <= a; i++){
+            for(int j = 1; j <= b; j++){
+
+            }
+        }
     }
 }
 
