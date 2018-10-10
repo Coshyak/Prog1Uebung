@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Lästig");
-        blatt3Aufgabe3();
+        blatt4Aufgabe3();
     }
 
 
@@ -137,6 +137,69 @@ public class Main {
             System.out.print(binary + " ");
         }
     }
+    public static void blatt4Aufgabe1() {
+        Scanner scan = new Scanner(System.in);
+        String input;
+        String output;
+        while(true){
+            System.out.println("Bitte einen Satz eingeben: ");
+            input = scan.nextLine();
 
+            if(input.isEmpty()){
+                System.out.println("Tschuess!");
+                return;
+            } else{
+                StringBuilder result = new StringBuilder();
+                for (int i = 0; i < input.length(); i++) {
+                    if (input.charAt(i) != ' ') {
+                        result = result.append(input.charAt(i));
+                    }
+                }
+                output = result.toString();
+            }
+        }
+    }
+    public static void blatt4Aufgabe2() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("String eingeben: ");
+        String s = scan.nextLine();
+        StringBuilder f = new StringBuilder();
+        if(s.isEmpty()){
+            System.out.println("ja Servus");
+        } else {
+            for (int i = 0; i < f.length(); i++) {
+              for(int j = 0; j <= i; j++){
+                f.append(s.charAt(i));
+              }
+            }
+            System.out.println(f.toString());
+        }
+    }
+    public static void blatt4Aufgabe3() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("String eingeben: ");
+        String s = scan.nextLine();
+        StringBuilder sb = new StringBuilder();
+        sb.append(s);
+
+        while(true){
+            System.out.println("Position zum Loeschen (-1 bis Ende): ");
+            int a = scan.nextInt();
+            if(a < 0){
+                System.out.println("Finaler String: " + sb.toString());
+                return;
+            }
+            if(s.length() == 0){
+                System.out.println("Ciao!");
+                return;
+            }
+            sb.deleteCharAt(a);
+            System.out.println("Aktueller String :" + sb.toString());
+
+        }
+    }
+    public static void blatt5Aufgabe1() {
+
+    }
 }
 
