@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Lästig");
-        blatt3Aufgabe2();
+        blatt3Aufgabe3();
     }
 
 
@@ -94,25 +94,49 @@ public class Main {
     public static void blatt3Aufgabe2(){
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
-        s.toUpperCase();
+        s = s.toUpperCase();
         boolean palindrom = false;
         for(int i = 0; i < s.length(); i++){
-          if(s.charAt(i) == s.charAt(s.length() -(1 + i))){
-              palindrom = true;
+          if(s.charAt(i) != s.charAt(s.length() -(1 + i))){
+              System.out.println("false");
+              return;
           } else{
-              palindrom = false;
-              break;
+              palindrom = true;
           }
         }
         System.out.println(palindrom);
     }
-    public static void  blatt3Aufgabe3(){
+    public static void blatt3Aufgabe3() {
+        Scanner scan = new Scanner(System.in);
         int a, b, c;
-        for(int i = 1; i <= a; i++){
-            for(int j = 1; j <= b; j++){
+        System.out.println("Bitte a eingeben: ");
+        a = scan.nextInt();
+        System.out.println("Bitte b eingeben: ");
+        b = scan.nextInt();
+        System.out.println("Bitte c eingeben: ");
+        c = scan.nextInt();
 
+        for(int i = 0; i < b; i++){
+            for(int j = 0; j < a; j++){
+                System.out.print("X ");
+            }
+            for(int k = 0; k <= c; k++){
+                System.out.println();
             }
         }
+
     }
+    public static void blatt3Aufgabe5() {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        for(int i = 0; i < Math.pow(2, n); i++){
+            String binary = Integer.toBinaryString(i);
+            for(int k = binary.length(); k < n; k++){
+                System.out.print(0);
+            }
+            System.out.print(binary + " ");
+        }
+    }
+
 }
 
